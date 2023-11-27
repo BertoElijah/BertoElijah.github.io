@@ -116,6 +116,7 @@ select {
   font-size: 8em;
   font-weight: 300;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .h2 {
@@ -165,19 +166,22 @@ body {
 }
 
 .primary-navbar {
-  margin-block-start: 1rem;
+  margin-block: 1rem;
   margin-inline: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.secondary-navbar img {
-  width: 60px;
+.secondary-navbar .hamburger {
+  fill: lch(var(--l-800) var(--clr-neutral));
+  width: 2em;
   aspect-ratio: 1;
+  margin: 0 auto;
+  display: block;
 }
 @media (min-width: 35em) {
-  .secondary-navbar img {
+  .secondary-navbar .hamburger {
     display: none;
   }
 }
@@ -197,4 +201,9 @@ body {
   color: lch(var(--l-800) var(--clr-neutral));
   text-decoration: none;
   text-transform: uppercase;
+}
+
+header {
+  margin-block: 1rem;
+  margin-inline: 2rem;
 }/*# sourceMappingURL=style.css.map */

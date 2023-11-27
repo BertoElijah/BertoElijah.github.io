@@ -22,16 +22,19 @@ body {
 }
 
 .primary-navbar {
-    margin-block-start: miscellaneous.$gap-400;
+    margin-block: miscellaneous.$gap-400;
     margin-inline: miscellaneous.$gap-500;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.secondary-navbar img{
-    width: 60px;
+.secondary-navbar .hamburger{
+    fill: colors.$clr-neutral-800;
+    width: 2em;
     aspect-ratio: 1;
+    margin: 0 auto;
+    display: block;
     @media (min-width: 35em) {
         display: none;
     }
@@ -50,4 +53,9 @@ body {
         text-decoration: none;
         text-transform: uppercase;
     }
+}
+
+header {
+    margin-block: miscellaneous.$gap-400;
+    margin-inline: miscellaneous.$gap-500;
 }
