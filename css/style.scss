@@ -8,12 +8,14 @@ body {
     background: colors.$clr-secondary-600;
 }
 
+.logo {
+    width: 3em;
+    aspect-ratio: 1;
+    background: url('/assets/media/elijah_logo.svg') center center/contain no-repeat;
+}
+
 #dark-mode {
-    position: absolute;
-    width: 60px;
+    width: 2em;
     aspect-ratio: 1;
     background: url('/assets/media/moon.svg') center center/contain no-repeat;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
 }
