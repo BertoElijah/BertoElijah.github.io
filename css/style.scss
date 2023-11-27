@@ -5,17 +5,49 @@
 @use "../assets/scss/components";
 
 body {
-    background: colors.$clr-secondary-600;
+    background: colors.$clr-neutral-100;
+    font-family: 'poppins';
 }
 
 .logo {
     width: 3em;
     aspect-ratio: 1;
-    background: url('/assets/media/elijah_logo.svg') center center/contain no-repeat;
+    fill: colors.$clr-secondary-600;
 }
 
 #dark-mode {
     width: 2em;
     aspect-ratio: 1;
-    background: url('/assets/media/moon.svg') center center/contain no-repeat;
+    background: url('/assets/media/moon.svg') top right/contain no-repeat;
+}
+
+.primary-navbar {
+    margin-block-start: miscellaneous.$gap-400;
+    margin-inline: miscellaneous.$gap-500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.secondary-navbar img{
+    width: 60px;
+    aspect-ratio: 1;
+    @media (min-width: 35em) {
+        display: none;
+    }
+}
+
+.secondary-navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: miscellaneous.$gap-400;
+    @media (max-width: 35em) {
+        display: none;
+    }
+    & a {
+        color: colors.$clr-neutral-800;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
 }

@@ -148,17 +148,53 @@ p {
 }
 
 body {
-  background: lch(var(--l-600) var(--clr-secondary));
+  background: lch(var(--l-100) var(--clr-neutral));
+  font-family: "poppins";
 }
 
 .logo {
   width: 3em;
   aspect-ratio: 1;
-  background: url("/assets/media/elijah_logo.svg") center center/contain no-repeat;
+  fill: lch(var(--l-600) var(--clr-secondary));
 }
 
 #dark-mode {
   width: 2em;
   aspect-ratio: 1;
-  background: url("/assets/media/moon.svg") center center/contain no-repeat;
+  background: url("/assets/media/moon.svg") top right/contain no-repeat;
+}
+
+.primary-navbar {
+  margin-block-start: 1rem;
+  margin-inline: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secondary-navbar img {
+  width: 60px;
+  aspect-ratio: 1;
+}
+@media (min-width: 35em) {
+  .secondary-navbar img {
+    display: none;
+  }
+}
+
+.secondary-navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 35em) {
+  .secondary-navbar ul {
+    display: none;
+  }
+}
+.secondary-navbar ul a {
+  color: lch(var(--l-800) var(--clr-neutral));
+  text-decoration: none;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
