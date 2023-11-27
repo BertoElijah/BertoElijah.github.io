@@ -1,0 +1,19 @@
+@use "../assets/scss/reset";
+@use "../assets/scss/colors";
+@use "../assets/scss/typography";
+@use "../assets/scss/miscellaneous";
+@use "../assets/scss/components";
+
+body {
+    background: colors.$clr-secondary-600;
+}
+
+#dark-mode {
+    position: absolute;
+    width: 60px;
+    aspect-ratio: 1;
+    background: url('/assets/media/moon.svg') center center/contain no-repeat;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}

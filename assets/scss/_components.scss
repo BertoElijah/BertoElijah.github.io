@@ -1,0 +1,74 @@
+@use "../scss/colors";
+@use "../scss/typography";
+@use "../scss/miscellaneous";
+
+// H1
+
+$h1: (
+    font-family: typography.$font-family-heading,
+    font-size: typography.$font-size-800,
+    font-weight: typography.$font-weight-300,
+    text-transform: uppercase,
+);
+
+.h1 {
+    @each $property, $value in $h1 {
+        #{$property}: $value;
+    }
+}
+
+// H2
+
+$h2: (
+    font-family: typography.$font-family-main,
+    font-size: typography.$font-size-700,
+    font-weight: typography.$font-weight-300,
+    text-transform: capitalize,
+);
+
+.h2 {
+    @each $property, $value in $h2 {
+        #{$property}: $value;
+    }
+}
+
+// H3
+
+$h3: (
+    font-family: typography.$font-family-main,
+    font-size: typography.$font-size-600,
+    font-weight: typography.$font-weight-600,
+    text-transform: capitalize,
+);
+
+.h3 {
+    @each $property, $value in $h3 {
+        #{$property}: $value;
+    }
+}
+
+
+// H4
+
+$h4: (
+    font-family: typography.$font-family-main,
+    font-size: typography.$font-size-500,
+    font-weight: typography.$font-weight-600,
+    font-style: italic,
+    text-transform: capitalize,
+);
+
+.h4 {
+    @each $property, $value in $h4 {
+        #{$property}: $value;
+    }
+}
+
+//p
+
+p {
+    font-family: typography.$font-family-main;
+    font-size: typography.$font-size-400;
+    font-weight: typography.$font-weight-400;
+    text-transform: capitalize;
+}

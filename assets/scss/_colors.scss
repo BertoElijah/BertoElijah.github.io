@@ -1,0 +1,30 @@
+$clr-primary-600: lch(var(--l-600) var(--clr-primary));
+$clr-primary-400: lch(var(--l-400) var(--clr-primary));$clr-primary-300: lch(var(--l-300) var(--clr-primary));
+
+$clr-secondary-600: lch(var(--l-600) var(--clr-secondary));
+$clr-secondary-400: lch(var(--l-400) var(--clr-secondary));
+$clr-secondary-300: lch(var(--l-300) var(--clr-secondary));
+
+$clr-neutral-800: lch(var(--l-800) var(--clr-neutral));
+$clr-neutral-400: lch(var(--l-400) var(--clr-neutral));
+$clr-neutral-100: lch(var(--l-100) var(--clr-neutral));
+
+:root {
+  --clr-primary: 72 290;
+  --clr-secondary: 25 200;
+  --clr-neutral: 0 0;
+
+  --l-100: 21%;
+  --l-300: 46%;
+  --l-400: 60%;
+  --l-600: 75%;
+  --l-800: 97%;
+}
+
+.dark-theme {
+  --l-100: 97%;
+  --l-300: 75%;
+  --l-400: 60%;
+  --l-600: 46%;
+  --l-800: 21%;
+}
