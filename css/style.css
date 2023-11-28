@@ -37,6 +37,10 @@ body {
   line-height: 1.5;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
@@ -152,6 +156,45 @@ p {
   text-transform: capitalize;
 }
 
+.button {
+  position: relative;
+  padding: 0.7em 1.25em;
+  border-radius: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-style: none;
+  background: rgba(119, 119, 119, 0);
+  color: lch(var(--l-800) var(--clr-neutral));
+}
+.button svg {
+  position: absolute;
+  width: 2em;
+  aspect-ratio: 1;
+  top: 50%;
+  translate: 10% -50%;
+  opacity: 0;
+  scale: 0;
+}
+.button:hover {
+  background: lch(var(--l-600) var(--clr-primary));
+  color: lch(var(--l-100) var(--clr-neutral));
+  padding: 0.7em 3em 0.7em 1.25em;
+  transition: all 700ms ease;
+}
+.button:hover svg {
+  opacity: 1;
+  scale: 0.6;
+  rotate: -45deg;
+  transition: all 250ms ease-in;
+  transition-delay: 350ms;
+  fill: lch(var(--l-100) var(--clr-neutral));
+}
+.button:hover svg.point-down {
+  rotate: 90deg;
+  transition: all 250ms ease-in;
+  transition-delay: 300ms;
+}
+
 body {
   background: lch(var(--l-100) var(--clr-neutral));
   font-family: "poppins";
@@ -208,6 +251,41 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
+  /*& a {
+      position: relative;
+      color: colors.$clr-neutral-800;
+      padding: 0.7em 1.25em;
+      border-radius: 50px;
+      text-transform: uppercase;
+      & svg {
+          position: absolute;
+          width: 2em;
+          aspect-ratio: 1;
+          top: 50%;
+          translate: 10% -50%;
+          opacity: 0;
+          scale: 0;
+      }
+      &:hover {
+          background: colors.$clr-primary-600;
+          color: colors.$clr-neutral-100;
+          padding: 0.7em 3em 0.7em 1.25em;
+          transition: all 700ms ease;
+          & svg {
+              opacity: 1;
+              scale: 0.60;
+              rotate: (-45deg);
+              transition: all 250ms ease-in;
+              transition-delay: 350ms;
+              fill: colors.$clr-neutral-100;
+          }
+          & svg.point-down {
+              rotate: (90deg);
+              transition: all 250ms ease-in;
+              transition-delay: 300ms;
+          }
+      }
+  }*/
 }
 @media (max-width: 40em) {
   .secondary-navbar ul {
@@ -219,42 +297,6 @@ body {
   aspect-ratio: 1;
   background: url("/assets/media/moon.svg") top right/contain no-repeat;
   margin-left: 1rem;
-}
-.secondary-navbar ul a {
-  position: relative;
-  color: lch(var(--l-800) var(--clr-neutral));
-  padding: 0.7em 1.25em;
-  border-radius: 50px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.secondary-navbar ul a svg {
-  position: absolute;
-  width: 2em;
-  aspect-ratio: 1;
-  top: 50%;
-  translate: 10% -50%;
-  opacity: 0;
-  scale: 0;
-}
-.secondary-navbar ul a:hover {
-  background: lch(var(--l-600) var(--clr-primary));
-  color: lch(var(--l-100) var(--clr-neutral));
-  padding: 0.7em 3em 0.7em 1.25em;
-  transition: all 700ms ease;
-}
-.secondary-navbar ul a:hover svg {
-  opacity: 1;
-  scale: 0.6;
-  rotate: -45deg;
-  transition: all 250ms ease-in;
-  transition-delay: 350ms;
-  fill: lch(var(--l-100) var(--clr-neutral));
-}
-.secondary-navbar ul a:hover svg.point-down {
-  rotate: 90deg;
-  transition: all 250ms ease-in;
-  transition-delay: 300ms;
 }
 
 header {
@@ -296,6 +338,7 @@ header .hero {
   display: flex;
   align-items: center;
   position: relative;
+  width: 100dvw;
   height: 100%;
   margin-block: 0.5rem;
   background: lch(var(--l-600) var(--clr-primary));
@@ -310,7 +353,6 @@ header .hero {
 }
 .marquee-box .marquee p {
   display: inline-block;
-  min-width: 100%;
   padding-left: 100%;
   padding-right: 15%;
   color: lch(var(--l-100) var(--clr-neutral));
@@ -329,4 +371,27 @@ header .hero {
   100% {
     transform: translateX(-100%);
   }
+}
+.about-me {
+  margin-block: 1rem;
+  margin-inline: 2rem;
+  display: flex;
+  gap: 4rem;
+  flex-grow: 1;
+  align-items: center;
+}
+.about-me .about-me-item {
+  flex-grow: 1;
+}
+.about-me .text-about-me {
+  gap: 4rem;
+}
+.about-me .text-about-me p {
+  max-width: 70ch;
+  text-align: justify;
+}
+.about-me .img-about-me img {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  scale: 0.8;
 }/*# sourceMappingURL=style.css.map */

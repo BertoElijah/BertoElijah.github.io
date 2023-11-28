@@ -67,12 +67,11 @@ body {
         background: url('/assets/media/moon.svg') top right/contain no-repeat;
         margin-left: miscellaneous.$gap-400;
     }
-    & a {
+    /*& a {
         position: relative;
         color: colors.$clr-neutral-800;
         padding: 0.7em 1.25em;
         border-radius: 50px;
-        text-decoration: none;
         text-transform: uppercase;
         & svg {
             position: absolute;
@@ -102,7 +101,7 @@ body {
                 transition-delay: 300ms;
             }
         }
-    }
+    }*/
 }
 
 header {
@@ -142,6 +141,7 @@ header {
     display: flex;
     align-items: center;
     position: relative;
+    width: 100dvw;
     height: 100%;
     margin-block: miscellaneous.$gap-300;
     background: colors.$clr-primary-600;
@@ -154,7 +154,6 @@ header {
         text-overflow: fade;
         & p {
             display: inline-block;
-            min-width: 100%;
             padding-left: 100%;
             padding-right: 15%;
             color: colors.$clr-neutral-100;
@@ -174,5 +173,29 @@ header {
   
     100% {
       transform: translateX(-100%);
+    }
+  }
+
+  .about-me {
+    margin-block: miscellaneous.$gap-400;
+    margin-inline: miscellaneous.$gap-500;
+    display: flex;
+    gap: miscellaneous.$gap-600;
+    flex-grow: 1;
+    align-items: center;
+    & .about-me-item {
+        flex-grow: 1;
+    }
+    & .text-about-me {
+        gap: miscellaneous.$gap-600;
+        & p {
+            max-width: 70ch;
+            text-align: justify;
+        }
+    }
+    & .img-about-me img{
+        aspect-ratio: 1;
+        border-radius: 50%;
+        scale: 0.8;
     }
   }
