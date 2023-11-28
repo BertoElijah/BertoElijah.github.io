@@ -12,13 +12,7 @@ body {
 .logo {
     width: 3em;
     aspect-ratio: 1;
-    fill: colors.$clr-secondary-600;
-}
-
-#dark-mode {
-    width: 2em;
-    aspect-ratio: 1;
-    background: url('/assets/media/moon.svg') top right/contain no-repeat;
+    fill: colors.$clr-primary-600;
 }
 
 .primary-navbar {
@@ -39,7 +33,7 @@ body {
         display: none;
     }
     &:hover {
-        fill: colors.$clr-secondary-600;
+        fill: colors.$clr-primary-600;
     }
 }
 
@@ -47,14 +41,52 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: miscellaneous.$gap-400;
     @media (max-width: 35em) {
         display: none;
     }
+    & #dark-mode {
+        width: 2em;
+        aspect-ratio: 1;
+        background: url('/assets/media/moon.svg') top right/contain no-repeat;
+        margin-left: miscellaneous.$gap-400;
+    }
     & a {
+        position: relative;
         color: colors.$clr-neutral-800;
+        padding: 0.7em 1.25em;
+        border-radius: 50px;
         text-decoration: none;
         text-transform: uppercase;
+        z-index: 1;
+        &:hover {
+            background: colors.$clr-primary-600;
+            color: colors.$clr-neutral-100;
+            padding: 0.7em 3em 0.7em 1.25em;
+            transition: all 700ms ease;
+            &::after {
+                opacity: 1;
+                scale: 2.25;
+                transition: all 300ms ease-in;
+                transition-delay: 350ms;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            translate: -50% -50% ;
+            background: url('/assets/media/arrow.svg') center center/ contain no-repeat;
+            background-size: contain;
+            display: inline-block;
+            width: 1.75em; 
+            height: 1em;
+            content:"";
+            opacity: 0;
+            scale: (0);
+            filter: colors.$clr-svg-800;
+            z-index: 0;
+        }
     }
 }
 
@@ -80,6 +112,10 @@ header {
     & .hero {
         width: 100%;
         aspect-ratio: 16/9;
+        @media (max-width:35em) {
+            aspect-ratio: 9/16;
+            background-size: cover;
+        }
         background: url('/assets/media/istockphoto-1337005456-612x612.jpeg') center center / contain no-repeat;
     }
 }
