@@ -22,7 +22,7 @@ body {
 }
 
 .primary-navbar {
-    margin-block: miscellaneous.$gap-400;
+    margin-block: miscellaneous.$gap-500 miscellaneous.$gap-400;
     margin-inline: miscellaneous.$gap-500;
     display: flex;
     justify-content: space-between;
@@ -37,6 +37,9 @@ body {
     display: block;
     @media (min-width: 35em) {
         display: none;
+    }
+    &:hover {
+        fill: colors.$clr-secondary-600;
     }
 }
 
@@ -58,4 +61,25 @@ body {
 header {
     margin-block: miscellaneous.$gap-400;
     margin-inline: miscellaneous.$gap-500;
+    color: colors.$clr-neutral-800;
+    & .text-banner {
+        position: relative;
+        justify-content: space-between;
+        margin-block: miscellaneous.$gap-500 miscellaneous.$gap-400;
+        & > * {
+            display: table-cell;
+            vertical-align: bottom;
+        }
+        & .right-banner {
+            text-align: right;
+            position: absolute;
+            right: 0;
+            bottom: -16%;
+        }
+    }
+    & .hero {
+        width: 100%;
+        aspect-ratio: 16/9;
+        background: url('/assets/media/istockphoto-1337005456-612x612.jpeg') center center / contain no-repeat;
+    }
 }

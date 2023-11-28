@@ -166,7 +166,7 @@ body {
 }
 
 .primary-navbar {
-  margin-block: 1rem;
+  margin-block: 2rem 1rem;
   margin-inline: 2rem;
   display: flex;
   justify-content: space-between;
@@ -184,6 +184,9 @@ body {
   .secondary-navbar .hamburger {
     display: none;
   }
+}
+.secondary-navbar .hamburger:hover {
+  fill: lch(var(--l-600) var(--clr-secondary));
 }
 
 .secondary-navbar ul {
@@ -206,4 +209,25 @@ body {
 header {
   margin-block: 1rem;
   margin-inline: 2rem;
+  color: lch(var(--l-800) var(--clr-neutral));
+}
+header .text-banner {
+  position: relative;
+  justify-content: space-between;
+  margin-block: 2rem 1rem;
+}
+header .text-banner > * {
+  display: table-cell;
+  vertical-align: bottom;
+}
+header .text-banner .right-banner {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: -16%;
+}
+header .hero {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: url("/assets/media/istockphoto-1337005456-612x612.jpeg") center center/contain no-repeat;
 }/*# sourceMappingURL=style.css.map */
