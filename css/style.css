@@ -257,41 +257,6 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  /*& a {
-      position: relative;
-      color: colors.$clr-neutral-800;
-      padding: 0.7em 1.25em;
-      border-radius: 50px;
-      text-transform: uppercase;
-      & svg {
-          position: absolute;
-          width: 2em;
-          aspect-ratio: 1;
-          top: 50%;
-          translate: 10% -50%;
-          opacity: 0;
-          scale: 0;
-      }
-      &:hover {
-          background: colors.$clr-primary-600;
-          color: colors.$clr-neutral-100;
-          padding: 0.7em 3em 0.7em 1.25em;
-          transition: all 700ms ease;
-          & svg {
-              opacity: 1;
-              scale: 0.60;
-              rotate: (-45deg);
-              transition: all 250ms ease-in;
-              transition-delay: 350ms;
-              fill: colors.$clr-neutral-100;
-          }
-          & svg.point-down {
-              rotate: (90deg);
-              transition: all 250ms ease-in;
-              transition-delay: 300ms;
-          }
-      }
-  }*/
 }
 @media (max-width: 40em) {
   .secondary-navbar ul {
@@ -321,6 +286,11 @@ header .text-banner > * {
 }
 header .text-banner .h1 {
   color: lch(var(--l-600) var(--clr-primary));
+}
+@media (max-width: 35em) {
+  header .text-banner .h1 {
+    display: none;
+  }
 }
 header .text-banner .right-banner {
   text-align: right;
