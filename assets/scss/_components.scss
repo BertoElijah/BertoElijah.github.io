@@ -11,6 +11,7 @@ $h1: (
     font-weight: typography.$font-weight-300,
     text-transform: uppercase,
     line-height: 1,
+    text-indent: -10px,
 );
 
 .h1 {
@@ -27,6 +28,8 @@ $h2: (
     font-size: typography.$font-size-700,
     font-weight: typography.$font-weight-300,
     text-transform: capitalize,
+    text-indent: -5px,
+    line-height: 1,
 );
 
 .h2 {
@@ -43,6 +46,7 @@ $h3: (
     font-size: typography.$font-size-600,
     font-weight: typography.$font-weight-600,
     text-transform: capitalize,
+    text-indent: -5px,
 );
 
 .h3 {
