@@ -46,7 +46,7 @@ body {
     aspect-ratio: 1;
     margin: 0 auto;
     display: block;
-    @media (min-width: 40em) {
+    @media (min-width: miscellaneous.$s) {
         display: none;
     }
     &:hover {
@@ -58,7 +58,7 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    @media (max-width: 40em) {
+    @media (max-width: miscellaneous.$s) {
         display: none;
     }
     & #dark-mode {
@@ -143,7 +143,7 @@ header {
     position: relative;
     width: 100dvw;
     height: 100%;
-    margin-block: miscellaneous.$gap-300;
+    margin-block: miscellaneous.$gap-500;
     background: colors.$clr-primary-600;
     padding: miscellaneous.$gap-500 ;
     overflow: hidden;
@@ -177,25 +177,36 @@ header {
   }
 
   .about-me {
-    margin-block: miscellaneous.$gap-400;
+    margin-block: miscellaneous.$gap-600;
     margin-inline: miscellaneous.$gap-500;
-    display: flex;
     gap: miscellaneous.$gap-600;
-    flex-grow: 1;
-    align-items: center;
-    & .about-me-item {
-        flex-grow: 1;
-    }
-    & .text-about-me {
-        gap: miscellaneous.$gap-600;
-        & p {
-            max-width: 70ch;
-            text-align: justify;
-        }
-    }
-    & .img-about-me img{
-        aspect-ratio: 1;
-        border-radius: 50%;
-        scale: 0.8;
-    }
+    display: flex;
+    flex-wrap: wrap;
   }
+
+  .about-me .about-me-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    justify-content: center;
+    min-width: 35ch;
+    & .text-banner {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        & .button {
+            align-self: flex-end;
+            border: 2px solid colors.$clr-primary-600;
+          }
+      }
+  }
+
+  .about-me-img {
+    max-width: 350px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  

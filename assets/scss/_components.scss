@@ -5,6 +5,7 @@
 // H1
 
 $h1: (
+    color: colors.$clr-primary-600,
     font-family: typography.$font-family-heading,
     font-size: typography.$font-size-800,
     font-weight: typography.$font-weight-300,
@@ -21,6 +22,7 @@ $h1: (
 // H2
 
 $h2: (
+    color: colors.$clr-primary-600,
     font-family: typography.$font-family-main,
     font-size: typography.$font-size-700,
     font-weight: typography.$font-weight-300,
@@ -36,6 +38,7 @@ $h2: (
 // H3
 
 $h3: (
+    color: colors.$clr-primary-600,
     font-family: typography.$font-family-main,
     font-size: typography.$font-size-600,
     font-weight: typography.$font-weight-600,
@@ -52,6 +55,7 @@ $h3: (
 // H4
 
 $h4: (
+    color: colors.$clr-primary-600,
     font-family: typography.$font-family-main,
     font-size: typography.$font-size-500,
     font-weight: typography.$font-weight-600,
@@ -68,6 +72,7 @@ $h4: (
 //p
 
 p {
+    color: colors.$clr-neutral-800;
     font-family: typography.$font-family-main;
     font-size: typography.$font-size-400;
     font-weight: typography.$font-weight-400;
@@ -85,6 +90,7 @@ p {
     border-style: none;
     background: #77777700;
     color: colors.$clr-neutral-800;
+    margin-block: miscellaneous.$gap-400;
     & svg {
         position: absolute;
         width: 2em;
