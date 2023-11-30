@@ -15,11 +15,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  & .logo {
+}
+
+.logo {
     width: 3em;
     aspect-ratio: 1;
     fill: colors.$clr-neutral-800;
-  }
 }
 
 .secondary-navbar .hamburger {
@@ -217,3 +218,29 @@ header {
     }
 }
 
+footer {
+  margin-block: miscellaneous.$gap-500 miscellaneous.$gap-400;
+  margin-inline: miscellaneous.$gap-500;
+}
+
+.general-info {
+  margin-block: miscellaneous.$gap-500;
+  text-align: end;
+}
+
+.flex-even-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-banner, .right-banner{
+    display: flex;
+    gap: miscellaneous.$gap-400;
+    align-items: center;
+}
+
+.right-banner svg{
+    width: 2em;
+    aspect-ratio: 1;
+    fill: colors.$clr-neutral-800;
+}

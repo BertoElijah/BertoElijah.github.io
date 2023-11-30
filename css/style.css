@@ -241,7 +241,8 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.primary-navbar .logo {
+
+.logo {
   width: 3em;
   aspect-ratio: 1;
   fill: lch(var(--l-800) var(--clr-neutral));
@@ -444,4 +445,31 @@ header .hero {
 }
 .projects .card-project .h1, .projects .card-project .h3 {
   color: lch(var(--l-100) var(--clr-neutral));
+}
+
+footer {
+  margin-block: 2rem 1rem;
+  margin-inline: 2rem;
+}
+
+.general-info {
+  margin-block: 2rem;
+  text-align: end;
+}
+
+.flex-even-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-banner, .right-banner {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.right-banner svg {
+  width: 2em;
+  aspect-ratio: 1;
+  fill: lch(var(--l-800) var(--clr-neutral));
 }/*# sourceMappingURL=style.css.map */
