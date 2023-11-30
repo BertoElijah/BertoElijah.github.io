@@ -205,6 +205,30 @@ p {
   transition-delay: 300ms;
 }
 
+.lowercase {
+  text-transform: none;
+}
+
+@media (max-width: 40em) {
+  .h1 {
+    font-size: 4em;
+  }
+  .h2 {
+    font-size: 1.875em;
+  }
+  .h3 {
+    font-size: 1.5em;
+  }
+  .h4 {
+    font-size: 0.625em;
+  }
+  .p {
+    font-size: 0.5;
+  }
+  .button {
+    font-size: 0.5;
+  }
+}
 body {
   background: lch(var(--l-100) var(--clr-neutral));
   font-family: "poppins";
@@ -272,11 +296,6 @@ header .text-banner > * {
 }
 header .text-banner .h1 {
   color: lch(var(--l-600) var(--clr-primary));
-}
-@media (max-width: 35em) {
-  header .text-banner .h1 {
-    display: none;
-  }
 }
 header .text-banner .right-banner {
   text-align: right;
@@ -353,7 +372,7 @@ header .hero {
 .about-me .about-me-item .text-banner {
   display: flex;
   flex-direction: column;
-  text-align: justify;
+  gap: 0.5rem;
 }
 .about-me .about-me-item .text-banner .button {
   align-self: flex-end;
@@ -376,10 +395,12 @@ header .hero {
 .projects .card-title {
   margin-inline: 2rem;
   padding: 2rem 0;
-  border-top: 2px solid lch(var(--l-100) var(--clr-neutral));
   border-bottom: 2px solid lch(var(--l-100) var(--clr-neutral));
   display: flex;
   justify-content: space-between;
+}
+.projects .card-title:nth-child(1) {
+  border-top: 2px solid lch(var(--l-100) var(--clr-neutral));
 }
 .projects .card-title .h2 {
   color: lch(var(--l-100) var(--clr-neutral));
@@ -393,6 +414,28 @@ header .hero {
   margin-inline: 2rem;
   padding: 2rem 0;
   border-bottom: 2px solid lch(var(--l-100) var(--clr-neutral));
+  z-index: 1;
+}
+.projects .card-project .card-bg {
+  position: absolute;
+  bottom: calc(0.5rem - 0.5em);
+  width: 100%;
+  height: 100%;
+}
+.projects .card-project .card-bg::before {
+  content: "";
+  position: absolute;
+  bottom: calc(0.5rem - 0.5em);
+  width: 102%;
+  right: -1em;
+  height: 100%;
+}
+.projects .card-project .card-bg:hover::before {
+  background: url(/assets/media/istockphoto-1337005456-612x612.jpeg) center center/cover no-repeat;
+  opacity: 0.3;
+  filter: blur(4px);
+  overflow: none;
+  z-index: -1;
 }
 .projects .card-project .h2 {
   font-family: "antonio";
@@ -401,21 +444,4 @@ header .hero {
 }
 .projects .card-project .h1, .projects .card-project .h3 {
   color: lch(var(--l-100) var(--clr-neutral));
-}
-.projects .card-project::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -1%;
-  width: 102%;
-  height: 100%;
-  background: url(/assets/media/istockphoto-1337005456-612x612.jpeg) center center/cover no-repeat;
-  filter: blur(5px);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -10;
-}
-.projects .card-project:hover::before {
-  opacity: 0.8; /* Adjust the opacity value as needed */
-  z-index: 1;
 }/*# sourceMappingURL=style.css.map */

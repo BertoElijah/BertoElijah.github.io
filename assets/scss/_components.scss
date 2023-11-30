@@ -124,3 +124,34 @@ p {
         }
     }
 }
+
+$lowercase: (
+    text-transform: none,
+);
+
+.lowercase {
+    @each $property, $value in $lowercase {
+        #{$property}: $value;
+    }
+}
+
+@media (max-width:miscellaneous.$s) {
+    .h1 {
+        font-size: calc(typography.$font-size-800/2);
+    }
+    .h2 {
+        font-size: calc(typography.$font-size-700/2);
+    }
+    .h3 {
+        font-size: calc(typography.$font-size-600/2);
+    }
+    .h4 {
+        font-size: calc(typography.$font-size-500/2);
+    }
+    .p {
+        font-size: calc(typography.$font-size-400/2);
+    }
+    .button {
+        font-size: calc(typography.$font-size-400/2);
+    }
+}
