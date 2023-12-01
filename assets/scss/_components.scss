@@ -2,34 +2,77 @@
 @use "../scss/typography";
 @use "../scss/miscellaneous";
 
-// H1
+// ARTICLE
 
-$h1: (
-    color: colors.$clr-primary-600,
-    font-family: typography.$font-family-heading,
-    font-size: typography.$font-size-800,
-    font-weight: typography.$font-weight-300,
+article {
+    margin-inline: miscellaneous.$spacer-600; 
+}
+
+
+// BUTTON
+
+$button: (
+    border:2.5px solid colors.$clr-secondary,
+    border-radius: 64px,
+    padding: 0.6em 0 0.6em 1.5em,
+    font-family: 'Poppins',
+    font-weight: typography.$font-weight-400,
     text-transform: uppercase,
-    line-height: 1,
-    text-indent: -10px,
+    font-size: typography.$font-size-400,
+    color: colors.$clr-secondary,
+    width: fit-content,
+    justify-self: end,
 );
 
-.h1 {
-    @each $property, $value in $h1 {
+.button {
+    @each $property, $value in $button {
         #{$property}: $value;
     }
+}
+
+.button .arrow {
+    margin-left: 0.5em;
+    width: 1.3em;
+    fill: colors.$clr-neutral-light;
+    visibility: hidden;
+    opacity: 0;
+    scale: 0;
+}
+
+.button:hover {
+    color: colors.$clr-neutral-light;
+    background: colors.$clr-secondary;
+    padding: 0.6em 1.5em 0.6em 1.5em;
+    transition: all 250ms ease;
+}
+
+.button:hover .arrow{
+    visibility: visible;
+    opacity: 1;
+    scale: 0.8;
+    rotate: (-45deg);
+    transition: all 250ms ease-in;
+    transition-delay: 250ms;
+}
+
+.button:hover .downside{
+    visibility: visible;
+    opacity: 1;
+    scale: 0.8;
+    rotate: (90deg);
+    transition: all 250ms ease-in;
+    transition-delay: 250ms;
 }
 
 // H2
 
 $h2: (
-    color: colors.$clr-primary-600,
-    font-family: typography.$font-family-main,
     font-size: typography.$font-size-700,
-    font-weight: typography.$font-weight-300,
+    font-weight: typography.$font-weight-400,
+    font-family: 'Poppins',
     text-transform: capitalize,
-    text-indent: -5px,
-    line-height: 1,
+    color: colors.$clr-neutral-light,
+    line-height: 0.8,
 );
 
 .h2 {
@@ -38,120 +81,71 @@ $h2: (
     }
 }
 
-// H3
+// Paragraph
 
-$h3: (
-    color: colors.$clr-primary-600,
-    font-family: typography.$font-family-main,
-    font-size: typography.$font-size-600,
-    font-weight: typography.$font-weight-600,
-    text-transform: capitalize,
-    text-indent: -5px,
-);
-
-.h3 {
-    @each $property, $value in $h3 {
-        #{$property}: $value;
-    }
-}
-
-
-// H4
-
-$h4: (
-    color: colors.$clr-primary-600,
-    font-family: typography.$font-family-main,
-    font-size: typography.$font-size-500,
-    font-weight: typography.$font-weight-600,
-    font-style: italic,
-    text-transform: capitalize,
-);
-
-.h4 {
-    @each $property, $value in $h4 {
-        #{$property}: $value;
-    }
-}
-
-//p
-
-p {
-    color: colors.$clr-neutral-800;
-    font-family: typography.$font-family-main;
-    font-size: typography.$font-size-400;
-    font-weight: typography.$font-weight-400;
-    text-transform: capitalize;
-}
-
-// button
-
-.button {
-    position: relative;
-    padding: 0.7em 1.25em;
-    border-radius: 50px;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-style: none;
-    background: #77777700;
-    color: colors.$clr-neutral-800;
-    margin-block: miscellaneous.$gap-400;
-    & svg {
-        position: absolute;
-        width: 2em;
-        aspect-ratio: 1;
-        top: 50%;
-        translate: 10% -50%;
-        opacity: 0;
-        scale: 0;
-    }
-    &:hover {
-        background: colors.$clr-primary-600;
-        color: colors.$clr-neutral-100;
-        padding: 0.7em 3em 0.7em 1.25em;
-        transition: all 700ms ease;
-        & svg {
-            opacity: 1;
-            scale: 0.60;
-            rotate: (-45deg);
-            transition: all 250ms ease-in;
-            transition-delay: 350ms;
-            fill: colors.$clr-neutral-100;
-        }
-        & svg.point-down {
-            rotate: (90deg);
-            transition: all 250ms ease-in;
-            transition-delay: 300ms;
-        }
-    }
-}
-
-$lowercase: (
+$paragraph: (
+    font-size: typography.$font-size-400,
+    font-weight: typography.$font-weight-400,
+    font-family: 'Poppins',
     text-transform: none,
+    color: colors.$clr-neutral-light,
+    line-height: 1.25,
+    max-width: 60ch,
+    text-align: justify,
 );
 
-.lowercase {
-    @each $property, $value in $lowercase {
+.paragraph {
+    @each $property, $value in $paragraph {
         #{$property}: $value;
     }
 }
 
-@media (max-width:miscellaneous.$s) {
-    .h1 {
-        font-size: calc(typography.$font-size-800/2);
+// Flex box even columns
+
+$flex-even-column: (
+    display: flex,
+    flex-wrap: wrap,
+    align-items: center,
+    justify-content: center,
+    margin-block: miscellaneous.$spacer-600,
+    padding-block: miscellaneous.$spacer-600,
+    gap: miscellaneous.$spacer-600,
+);
+
+.flex-even-column {
+    @each $property, $value in $flex-even-column {
+        #{$property}: $value;
     }
-    .h2 {
-        font-size: calc(typography.$font-size-700/2);
-    }
-    .h3 {
-        font-size: calc(typography.$font-size-600/2);
-    }
-    .h4 {
-        font-size: calc(typography.$font-size-500/2);
-    }
-    .p {
-        font-size: calc(typography.$font-size-400/2);
-    }
-    .button {
-        font-size: calc(typography.$font-size-400/2);
-    }
+}
+
+.flex-even-column > .column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 350px;
+    padding-block: miscellaneous.$spacer-600;
+}
+
+.text-banner {
+    display: grid;
+    place-items: center;
+}
+
+.subcolumn {
+    display: grid;
+    gap: miscellaneous.$spacer-600;
+}
+
+.flex-even-column > .image-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.round.pic {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 60%;
+    max-width: 400px;
+    background: red;
 }
