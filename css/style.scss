@@ -5,5 +5,38 @@
 @use "../assets/scss/components";
 
 body {
-  background: colors.$clr-neutral-dark;
+  background: colors.$clr-neutral-light;
+}
+
+Nav {
+  padding-block: miscellaneous.$spacer-700 miscellaneous.$spacer-600;
+  padding-inline: miscellaneous.$spacer-700;
+  display: flex;
+  & .flex-even-column {
+    margin-left: auto; 
+    margin-right: 0;
+  } 
+  & .logo {
+    width: miscellaneous.$spacer-700;
+    fill: colors.$clr-primary;
+  }
+}
+
+#dark-mode {
+  width: miscellaneous.$spacer-600;
+  aspect-ratio: 1/1;
+  background-image: url(/assets/media/moon.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+header {
+  padding-inline: miscellaneous.$spacer-700;
+}
+
+.header {
+  background: url(/assets/media/istockphoto-1337005456-612x612.jpeg) no-repeat;
+  background-size: cover;
+  padding-bottom: 56.25%;
+  width: 100%;
 }

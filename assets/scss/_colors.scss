@@ -1,19 +1,22 @@
 $clr-primary: var(--clr-primary);
 $clr-secondary: var(--clr-secondary);
+$clr-neutral: var(--clr-neutral);
 $clr-neutral-dark: var(--clr-neutral-dark);
 $clr-neutral-light: var(--clr-neutral-light);
 
 
 :root {
-  --clr-primary: #1434A4;
-  --clr-secondary: #FFAC1C;
-  --clr-neutral-dark: #333;
-  --clr-neutral-light: #f7f7f7;
+  --clr-primary: #7D85FF;
+  --clr-secondary: #549D9F;
+  --clr-neutral: #ffb347;
+  --clr-neutral-dark: #2A2A2A;
+  --clr-neutral-light: #F4F4F4;
 }
 
 .dark-theme {
-  --clr-primary: #FFAC1C;
-  --clr-secondary: #1434A4;
-  --clr-neutral-dark: #f7f7f7;
-  --clr-neutral-light: #333;
+  --clr-primary: #ffb347;
+  --clr-secondary: #FFAA33;
+  --clr-neutral: #7D85FF;
+  --clr-neutral-dark: #F4F4F4;
+  --clr-neutral-light: #2A2A2A;
 }

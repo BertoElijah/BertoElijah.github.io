@@ -5,23 +5,30 @@
 // ARTICLE
 
 article {
-    margin-inline: miscellaneous.$spacer-600; 
+    padding-inline: miscellaneous.$spacer-600; 
+    margin-block: miscellaneous.$spacer-600;
+    padding-block: miscellaneous.$spacer-600;
 }
 
+.blue {
+    background: colors.$clr-primary;
+    margin-inline: none;
+}
 
 // BUTTON
 
 $button: (
-    border:2.5px solid colors.$clr-secondary,
+    border:2.5px solid colors.$clr-primary,
     border-radius: 64px,
     padding: 0.6em 0 0.6em 1.5em,
     font-family: 'Poppins',
     font-weight: typography.$font-weight-400,
     text-transform: uppercase,
     font-size: typography.$font-size-400,
-    color: colors.$clr-secondary,
+    color: colors.$clr-primary,
     width: fit-content,
-    justify-self: end,
+    justify-self: center,
+    max-height: miscellaneous.$spacer-700,
 );
 
 .button {
@@ -41,7 +48,7 @@ $button: (
 
 .button:hover {
     color: colors.$clr-neutral-light;
-    background: colors.$clr-secondary;
+    background: colors.$clr-primary;
     padding: 0.6em 1.5em 0.6em 1.5em;
     transition: all 250ms ease;
 }
@@ -107,8 +114,6 @@ $flex-even-column: (
     flex-wrap: wrap,
     align-items: center,
     justify-content: center,
-    margin-block: miscellaneous.$spacer-600,
-    padding-block: miscellaneous.$spacer-600,
     gap: miscellaneous.$spacer-600,
 );
 
@@ -146,6 +151,28 @@ $flex-even-column: (
     border-radius: 50%;
     aspect-ratio: 1;
     width: 60%;
-    max-width: 400px;
+    max-width: 350px;
     background: red;
+}
+
+.project-list {
+    padding-block: miscellaneous.$spacer-600;
+}
+
+.project-card-item {
+    display: grid;
+    
+    border-bottom: 2px solid colors.$clr-neutral-light;
+    padding-block: miscellaneous.$spacer-400;
+    & > .h2 {
+        line-height: 0;
+    }
+    &:nth-child(1) {
+        border-top: 2px solid colors.$clr-neutral-light;
+    }
+}
+
+.accent {
+    font-family: 'antonio';
+    color: colors.$clr-secondary;
 }
