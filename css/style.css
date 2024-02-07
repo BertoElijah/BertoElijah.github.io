@@ -187,7 +187,7 @@ article {
   font-weight: 400;
   font-family: "Poppins";
   text-transform: capitalize;
-  color: var(--clr-neutral-light);
+  color: var(--clr-primary);
   line-height: 0.8;
 }
 
@@ -196,7 +196,7 @@ article {
   font-weight: 400;
   font-family: "Poppins";
   text-transform: none;
-  color: var(--clr-neutral-light);
+  color: var(--clr-neutral-dark);
   line-height: 1.25;
   max-width: 60ch;
   text-align: justify;
@@ -239,7 +239,7 @@ article {
   aspect-ratio: 1;
   width: 60%;
   max-width: 350px;
-  background: red;
+  background: var(--clr-primary);
 }
 
 .project-list {
@@ -269,7 +269,7 @@ body {
 
 Nav {
   padding-block: 3em 2em;
-  padding-inline: 3em;
+  padding-inline: 4em;
   display: flex;
 }
 Nav .flex-even-column {
@@ -290,7 +290,7 @@ Nav .logo {
 }
 
 header {
-  padding-inline: 3em;
+  padding-inline: 4em;
 }
 
 .header {
@@ -298,4 +298,17 @@ header {
   background-size: cover;
   padding-bottom: 56.25%;
   width: 100%;
+}
+
+.sidebar {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  right: 1.5em;
+  bottom: 2em;
+  gap: 1em;
+}
+.sidebar .sidebar_icon {
+  width: 1em;
+  fill: var(--clr-neutral-dark);
 }/*# sourceMappingURL=style.css.map */

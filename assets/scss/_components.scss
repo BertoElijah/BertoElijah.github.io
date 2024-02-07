@@ -78,7 +78,7 @@ $h2: (
     font-weight: typography.$font-weight-400,
     font-family: 'Poppins',
     text-transform: capitalize,
-    color: colors.$clr-neutral-light,
+    color: colors.$clr-primary,
     line-height: 0.8,
 );
 
@@ -95,7 +95,7 @@ $paragraph: (
     font-weight: typography.$font-weight-400,
     font-family: 'Poppins',
     text-transform: none,
-    color: colors.$clr-neutral-light,
+    color: colors.$clr-neutral-dark,
     line-height: 1.25,
     max-width: 60ch,
     text-align: justify,
@@ -152,7 +152,7 @@ $flex-even-column: (
     aspect-ratio: 1;
     width: 60%;
     max-width: 350px;
-    background: red;
+    background: colors.$clr-primary;
 }
 
 .project-list {

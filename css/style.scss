@@ -10,7 +10,7 @@ body {
 
 Nav {
   padding-block: miscellaneous.$spacer-700 miscellaneous.$spacer-600;
-  padding-inline: miscellaneous.$spacer-700;
+  padding-inline: miscellaneous.$spacer-800;
   display: flex;
   & .flex-even-column {
     margin-left: auto; 
@@ -31,7 +31,7 @@ Nav {
 }
 
 header {
-  padding-inline: miscellaneous.$spacer-700;
+  padding-inline: miscellaneous.$spacer-800;
 }
 
 .header {
@@ -39,4 +39,17 @@ header {
   background-size: cover;
   padding-bottom: 56.25%;
   width: 100%;
+}
+
+.sidebar {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  right: miscellaneous.$spacer-500;
+  bottom: miscellaneous.$spacer-600;
+  gap: miscellaneous.$spacer-400;
+  & .sidebar_icon {
+    width: miscellaneous.$spacer-400;
+    fill: colors.$clr-neutral-dark;
+  }
 }
